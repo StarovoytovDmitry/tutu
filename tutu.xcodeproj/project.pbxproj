@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		680072868C3FE8A5C4B97364 /* Pods_tutu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B32592264CB5064D4AA1E9 /* Pods_tutu.framework */; };
+		B727FE761D883D1700A9FEEB /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B727FE751D883D1700A9FEEB /* StationViewController.swift */; };
 		B75715591D81D3F30038C059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75715581D81D3F30038C059 /* AppDelegate.swift */; };
 		B757155B1D81D3F30038C059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757155A1D81D3F30038C059 /* ViewController.swift */; };
 		B757155E1D81D3F30038C059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B757155C1D81D3F30038C059 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		67B32592264CB5064D4AA1E9 /* Pods_tutu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tutu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A956CB80243D32AA53370B7B /* Pods-tutu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutu.release.xcconfig"; path = "Pods/Target Support Files/Pods-tutu/Pods-tutu.release.xcconfig"; sourceTree = "<group>"; };
+		B727FE751D883D1700A9FEEB /* StationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		B75715551D81D3F30038C059 /* tutu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75715581D81D3F30038C059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B757155A1D81D3F30038C059 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,9 +92,10 @@
 		B7B663A51D86D63C00878D96 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B757155A1D81D3F30038C059 /* ViewController.swift */,
-				B7B663AC1D871D3800878D96 /* StationTableViewCell.swift */,
 				B7B663AE1D874F5400878D96 /* TabletimeViewController.swift */,
+				B757155A1D81D3F30038C059 /* ViewController.swift */,
+				B727FE751D883D1700A9FEEB /* StationViewController.swift */,
+				B7B663AC1D871D3800878D96 /* StationTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				B757155B1D81D3F30038C059 /* ViewController.swift in Sources */,
 				B7B663AD1D871D3800878D96 /* StationTableViewCell.swift in Sources */,
 				B7B663A71D86E2C800878D96 /* DataManager.swift in Sources */,
+				B727FE761D883D1700A9FEEB /* StationViewController.swift in Sources */,
 				B75715591D81D3F30038C059 /* AppDelegate.swift in Sources */,
 				B7B663AB1D870E9300878D96 /* Model.swift in Sources */,
 			);

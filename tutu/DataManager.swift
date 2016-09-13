@@ -10,8 +10,8 @@ import Foundation
 import SwiftyJSON
 
 class DataManager {
-    
-    class func getTopAppsDataFromFileWithSuccess(success: ((data: NSData) -> Void)) {
+    //Получение данных
+    class func getDataFromFileWithSuccess(success: ((data: NSData) -> Void)) {
         //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             
             let filePath = NSBundle.mainBundle().pathForResource("allStations",ofType:"json")
@@ -27,25 +27,29 @@ class DataManager {
             }
         //})
     }
-}
 
-func parseData(direction: String) -> Array<CountrySity> {
+//Функция парсинга JSON в массив 
+class func parseData(direction: String) -> Array<CountrySity> {
     
     var sity: [CountrySity] = []
-    DataManager.getTopAppsDataFromFileWithSuccess { (data) in
-        
+    DataManager.getDataFromFileWithSuccess { (data) in
+        //JSON парсинг
         let json = JSON(data: data)
         if let sityArray = json[direction].array {
             for sityDict in sityArray {
                 let countryTitle: String? = sityDict["countryTitle"].string
                 let sityTitle: String? = sityDict["cityTitle"].string
                 
-                var stationArray1: [Stations] = []
+                var stationArray1: [Station] = []
                 
                 if let stationArray = sityDict["stations"].array {
                     for stationDict in stationArray {
                         let stationTitle: String? = stationDict["stationTitle"].string
-                        let station = Stations(stationTitle: stationTitle!)
+                        let countryTitle: String? = stationDict["countryTitle"].string
+                        let districtTitle: String? = stationDict["districtTitle"].string
+                        let cityTitle: String? = stationDict["cityTitle"].string
+                        let regionTitle: String? = stationDict["regionTitle"].string
+                        let station = Station(countryTitle: countryTitle!, districtTitle: districtTitle!, cityTitle: cityTitle!, regionTitle: regionTitle!, stationTitle: stationTitle!)
                         stationArray1.append(station)
                     }
                 }
@@ -56,5 +60,5 @@ func parseData(direction: String) -> Array<CountrySity> {
         }
     }
     return(sity)
-    
+}
 }
