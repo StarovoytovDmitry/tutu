@@ -25,7 +25,7 @@ class CountrySity: NSObject {
     }
 }
 
-class Station {
+class Station: NSObject {
     
     let countryTitle: String
     let districtTitle: String
